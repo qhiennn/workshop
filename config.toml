@@ -1,4 +1,4 @@
-# Change the default theme to be use when building the site with Hugo
+# Change the default theme to be use when building the s
 theme = "hugo-theme-learn"
 
 # === BẮT BUỘC: điền đúng baseURL ===
