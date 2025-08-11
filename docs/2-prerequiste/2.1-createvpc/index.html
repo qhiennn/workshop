@@ -1,4 +1,4 @@
-<!doctype html><html lang=vi class="js csstransforms3d">
+<!doctype html><html lang=en class="js csstransforms3d">
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -6,7 +6,7 @@
 <meta name=description content>
 <meta name=author content="journeyoftheaverageguy@gmail.com">
 <link rel=icon href=../../images/favicon.png type=image/png>
-<title>Tags :: AWS System Manager</title>
+<title>Prepare AWS Environment :: AWS System Manager</title>
 <link href=../../css/nucleus.css?1754934961 rel=stylesheet>
 <link href=../../css/fontawesome-all.min.css?1754934961 rel=stylesheet>
 <link href=../../css/hybrid.css?1754934961 rel=stylesheet>
@@ -20,7 +20,7 @@
 <script src=../../js/jquery-3.3.1.min.js?1754934961></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
-<body data-url=../../vi/tags/>
+<body data-url=../../2-prerequiste/2.1-createvpc/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -34,60 +34,63 @@
 </div>
 <script type=text/javascript src=../../js/lunr.min.js?1754934961></script>
 <script type=text/javascript src=../../js/auto-complete.js?1754934961></script>
-<script type=text/javascript>var baseurl="https://qhiennn.github.io/workshop//vi"</script>
+<script type=text/javascript>var baseurl="https://qhiennn.github.io/workshop/"</script>
 <script type=text/javascript src=../../js/search.js?1754934961></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
-<li data-nav-id=/vi/1-introduce/ title="Giới thiệu" class=dd-item>
-<a href=../../vi/1-introduce/>
-<b> 1. </b> Giới thiệu
+<li data-nav-id=/1-introduce/ title=Introduction class=dd-item>
+<a href=../../1-introduce/>
+<b> 1. </b> Introduction
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/vi/2-prerequiste/ title="Các bước chuẩn bị" class=dd-item>
-<a href=../../vi/2-prerequiste/>
-<b> 2. </b> Các bước chuẩn bị
+<li data-nav-id=/2-prerequiste/ title="Prerequisite Steps" class="dd-item
+parent">
+<a href=../../2-prerequiste/>
+<b> 2. </b> Prerequisite Steps
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/vi/2-prerequiste/2.1-createvpc/ title="Chuẩn bị môi trường AWS " class=dd-item>
-<a href=../../vi/2-prerequiste/2.1-createvpc/>
-<b> 2.1 </b> Chuẩn bị môi trường AWS
+<li data-nav-id=/2-prerequiste/2.1-createvpc/ title="Prepare AWS Environment" class="dd-item
+parent
+active">
+<a href=../../2-prerequiste/2.1-createvpc/>
+<b> 2.1 </b> Prepare AWS Environment
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/vi/2-prerequiste/2.2-createpublicsubnet/ title="Tạo Public subnet" class=dd-item>
-<a href=../../vi/2-prerequiste/2.2-createpublicsubnet/>
-<b> 2.2 </b> Tạo Public subnet
+<li data-nav-id=/2-prerequiste/2.2-createpublicsubnet/ title="Create Public Subnet" class=dd-item>
+<a href=../../2-prerequiste/2.2-createpublicsubnet/>
+<b> 2.2 </b> Create Public Subnet
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
 </ul>
 </li>
-<li data-nav-id=/vi/3-accessibilitytoinstances/ title="Tạo kết nối đến máy chủ EC2" class=dd-item>
-<a href=../../vi/3-accessibilitytoinstances/>
-<b> 3. </b> Tạo kết nối đến máy chủ EC2
+<li data-nav-id=/3-accessibilitytoinstances/ title="Create Connection to EC2 Instance" class=dd-item>
+<a href=../../3-accessibilitytoinstances/>
+<b> 3. </b> Create Connection to EC2 Instance
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/vi/4-s3log/ title=" Triển khai AWS Backup Alert & Verification với Lambda và SNS" class=dd-item>
-<a href=../../vi/4-s3log/>
-<b> 4. </b> Triển khai AWS Backup Alert & Verification với Lambda và SNS
+<li data-nav-id=/4-s3log/ title=" Deploy AWS Backup Alert & Verification with Lambda and SNS" class=dd-item>
+<a href=../../4-s3log/>
+<b> 4. </b> Deploy AWS Backup Alert & Verification with Lambda and SNS
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/vi/4-s3log/4.1-testkiemtra/ title="Test Kiểm Tra" class=dd-item>
-<a href=../../vi/4-s3log/4.1-testkiemtra/>
-<b> 4.1 </b> Test Kiểm Tra
+<li data-nav-id=/4-s3log/4.1-testkiemtra/ title="Test Verification" class=dd-item>
+<a href=../../4-s3log/4.1-testkiemtra/>
+<b> 4.1 </b> Test Verification
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
 </ul>
 </li>
-<li data-nav-id=/vi/5-cleanup/ title="Dọn dẹp tài nguyên  " class=dd-item>
-<a href=../../vi/5-cleanup/>
-<b>5. </b>Dọn dẹp tài nguyên
+<li data-nav-id=/5-cleanup/ title="Resource Cleanup" class=dd-item>
+<a href=../../5-cleanup/>
+<b>5. </b>Resource Cleanup
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
@@ -107,7 +110,7 @@
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=en value=https://qhiennn.github.io/workshop/tags/>English</option><option id=vi value=https://qhiennn.github.io/workshop/vi/tags/ selected>Tiếng Việt</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=en value=https://qhiennn.github.io/workshop/2-prerequiste/2.1-createvpc/ selected>English</option><option id=vi value=https://qhiennn.github.io/workshop/vi/2-prerequiste/2.1-createvpc/>Tiếng Việt</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div>
 </a>
 </li>
@@ -153,11 +156,18 @@
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=../../vi/>Backup & Disaster Recovery</a> > Tags
+<a href=../../>Backup & Disaster Recovery</a> > <a href=../../2-prerequiste/>Prerequisite Steps</a> > Prepare AWS Environment
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#1-log-in-to-aws-console>1. Log in to AWS Console</a></li>
+<li><a href=#2-create-an-ec2-instance>2. Create an EC2 Instance</a></li>
+<li><a href=#3-connect-to-the-ec2-instance>3. Connect to the EC2 Instance</a></li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
@@ -166,17 +176,76 @@
 </div>
 <div id=body-inner>
 <h1>
-taxonomy ::
-Tags
+Prepare AWS Environment
 </h1>
+<h1 id=-guide-to-creating-an-ec2-instance-on-aws>🚀 Guide to Creating an EC2 Instance on AWS</h1>
+<h2 id=1-log-in-to-aws-console>1. Log in to AWS Console</h2>
 <ul>
+<li>Go to <a href=https://console.aws.amazon.com/>https://console.aws.amazon.com/</a></li>
+<li>Select <strong>EC2</strong> from the service menu.</li>
 </ul>
+<hr>
+<h2 id=2-create-an-ec2-instance>2. Create an EC2 Instance</h2>
+<ol>
+<li><strong>Click</strong> <code>Launch instance</code>.</li>
+<li><strong>Name</strong>: e.g., <code>EC2-DynamoDB-Workshop</code>.</li>
+<li><strong>Select Amazon Machine Image (AMI)</strong>:
+<ul>
+<li><code>Amazon Linux 2 AMI (HVM), SSD Volume Type</code>.</li>
+</ul>
+</li>
+<li><strong>Choose Instance Type</strong>:
+<ul>
+<li><code>t2.micro</code> (Free Tier).</li>
+</ul>
+</li>
+<li><strong>Create or select a Key Pair</strong>:
+<ul>
+<li>If you don’t have one, choose <strong>Create new key pair</strong> and download the <code>.pem</code> file.</li>
+</ul>
+</li>
+<li><strong>Configure Network</strong>:
+<ul>
+<li>VPC: Select the default VPC or a custom VPC.</li>
+<li>Subnet: Choose a subnet in your preferred region.</li>
+<li>Enable Auto-assign Public IP: <strong>Yes</strong>.</li>
+</ul>
+</li>
+<li><strong>Security Group</strong>:
+<ul>
+<li>Create a new one or choose an existing Security Group with rules:
+<ul>
+<li><code>SSH</code> (Port 22) - Your IP.</li>
+<li>(Optional) Add HTTP (Port 80) and HTTPS (Port 443) depending on your project.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Storage</strong>:
+<ul>
+<li>8 GiB (SSD GP2) is sufficient for the workshop.</li>
+</ul>
+</li>
+<li><strong>Click</strong> <code>Launch Instance</code>.</li>
+</ol>
+<p><img src=../../images/2.prerequisite/EC2.png alt=VPC></p>
+<hr>
+<h2 id=3-connect-to-the-ec2-instance>3. Connect to the EC2 Instance</h2>
+<ol>
+<li>Go to <strong>EC2 Dashboard</strong> → Select the instance you just created.</li>
+<li>Click <strong>Connect</strong> → Select the <strong>SSH client</strong> tab.</li>
+<li>Run the following commands on your local machine:</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>chmod <span style=color:#ae81ff>400</span> your-key.pem
+ssh -i <span style=color:#e6db74>&#34;your-key.pem&#34;</span> ec2-user@&lt;Public-IP&gt;
+</code></pre></div><p><img src=../../images/2.prerequisite/1.png alt=VPC></p>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-next" href=../../vi/1-introduce/ title="Giới thiệu" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=../../2-prerequiste/ title="Prerequisite Steps"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=../../2-prerequiste/2.2-createpublicsubnet/ title="Create Public Subnet" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>

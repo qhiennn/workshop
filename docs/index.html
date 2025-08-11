@@ -6,18 +6,18 @@
 <meta name=description content>
 <meta name=author content="journeyoftheaverageguy@gmail.com">
 <link rel=icon href=./images/favicon.png type=image/png>
-<title>Session Management :: AWS System Manager</title>
-<link href=./css/nucleus.css?1754900659 rel=stylesheet>
-<link href=./css/fontawesome-all.min.css?1754900659 rel=stylesheet>
-<link href=./css/hybrid.css?1754900659 rel=stylesheet>
-<link href=./css/featherlight.min.css?1754900659 rel=stylesheet>
-<link href=./css/perfect-scrollbar.min.css?1754900659 rel=stylesheet>
-<link href=./css/auto-complete.css?1754900659 rel=stylesheet>
-<link href=./css/atom-one-dark-reasonable.css?1754900659 rel=stylesheet>
-<link href=./css/theme.css?1754900659 rel=stylesheet>
-<link href=./css/hugo-theme.css?1754900659 rel=stylesheet>
-<link href=./css/theme-workshop.css?1754900659 rel=stylesheet>
-<script src=./js/jquery-3.3.1.min.js?1754900659></script>
+<title>Backup & Disaster Recovery :: AWS System Manager</title>
+<link href=./css/nucleus.css?1754934961 rel=stylesheet>
+<link href=./css/fontawesome-all.min.css?1754934961 rel=stylesheet>
+<link href=./css/hybrid.css?1754934961 rel=stylesheet>
+<link href=./css/featherlight.min.css?1754934961 rel=stylesheet>
+<link href=./css/perfect-scrollbar.min.css?1754934961 rel=stylesheet>
+<link href=./css/auto-complete.css?1754934961 rel=stylesheet>
+<link href=./css/atom-one-dark-reasonable.css?1754934961 rel=stylesheet>
+<link href=./css/theme.css?1754934961 rel=stylesheet>
+<link href=./css/hugo-theme.css?1754934961 rel=stylesheet>
+<link href=./css/theme-workshop.css?1754934961 rel=stylesheet>
+<script src=./js/jquery-3.3.1.min.js?1754934961></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=./>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=./js/lunr.min.js?1754900659></script>
-<script type=text/javascript src=./js/auto-complete.js?1754900659></script>
+<script type=text/javascript src=./js/lunr.min.js?1754934961></script>
+<script type=text/javascript src=./js/auto-complete.js?1754934961></script>
 <script type=text/javascript>var baseurl="https://qhiennn.github.io/workshop/"</script>
-<script type=text/javascript src=./js/search.js?1754900659></script>
+<script type=text/javascript src=./js/search.js?1754934961></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -45,31 +45,23 @@
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/2-prerequiste/ title="Preparation " class=dd-item>
+<li data-nav-id=/2-prerequiste/ title="Prerequisite Steps" class=dd-item>
 <a href=./2-prerequiste/>
-<b> 2. </b> Preparation
+<b> 2. </b> Prerequisite Steps
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/2-prerequiste/2.1-createec2/ title="Preparing VPC and EC2" class=dd-item>
-<a href=./2-prerequiste/2.1-createec2/>
-<b> 2.1 </b> Preparing VPC and EC2
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/2-prerequiste/2.1-createec2/2.1.1-createvpc/ title="Prepare AWS Environment" class=dd-item>
-<a href=./2-prerequiste/2.1-createec2/2.1.1-createvpc/>
-<b> 2.1.1 </b> Prepare AWS Environment
+<li data-nav-id=/2-prerequiste/2.1-createvpc/ title="Prepare AWS Environment" class=dd-item>
+<a href=./2-prerequiste/2.1-createvpc/>
+<b> 2.1 </b> Prepare AWS Environment
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/ title="Create Public Subnet" class=dd-item>
-<a href=./2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/>
-<b> 2.1.2 </b> Create Public Subnet
+<li data-nav-id=/2-prerequiste/2.2-createpublicsubnet/ title="Create Public Subnet" class=dd-item>
+<a href=./2-prerequiste/2.2-createpublicsubnet/>
+<b> 2.2 </b> Create Public Subnet
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
 </li>
 </ul>
 </li>
@@ -79,9 +71,9 @@
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/4-s3log/ title="🚀 Deploy AWS Backup Alert & Verification with Lambda and SNS" class=dd-item>
+<li data-nav-id=/4-s3log/ title=" Deploy AWS Backup Alert & Verification with Lambda and SNS" class=dd-item>
 <a href=./4-s3log/>
-<b> 4. </b> 🚀 Deploy AWS Backup Alert & Verification with Lambda and SNS
+<b> 4. </b> Deploy AWS Backup Alert & Verification with Lambda and SNS
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
@@ -93,9 +85,9 @@
 </li>
 </ul>
 </li>
-<li data-nav-id=/6-cleanup/ title="Clean up resources" class=dd-item>
-<a href=./6-cleanup/>
-<b>6. </b>Clean up resources
+<li data-nav-id=/5-cleanup/ title="Resource Cleanup" class=dd-item>
+<a href=./5-cleanup/>
+<b>5. </b>Resource Cleanup
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
@@ -157,19 +149,18 @@
 <span id=sidebar-toggle-span>
 <a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i> navigation</a>
 </span>
-<h1 id=work-with-amazon-system-manager---session-manager>Work with Amazon System Manager - Session Manager</h1>
-<h3 id=overall>Overall</h3>
-<p>In this lab, you&rsquo;ll learn the basics and practice of Amazon System Manager - Session Manager
-. Perform creating public and private instance connections.</p>
+<h1 id=working-with-aws-backup--disaster-recovery-automation>Working with AWS Backup & Disaster Recovery Automation</h1>
+<h3 id=overview>Overview</h3>
+<p>In this lab, you will learn the basic concepts and practice using <strong>AWS Backup</strong> and <strong>Disaster Recovery</strong> for a <strong>multi-database</strong> environment (DynamoDB, DocumentDB,&mldr;).<br>
+The lab covers creating an automated backup plan, securely storing backup copies, testing data restoration capability, and setting up notifications for incidents.</p>
 <p><img src=./images/2.prerequisite/anhdiagram.png alt=VPC></p>
-<h3 id=content>Content</h3>
+<h3 id=contents>Contents</h3>
 <ol>
-<li><a href=1-introduce/>Introduction </a></li>
-<li><a href=2-prerequiste/>Preparation</a></li>
-<li><a href=3-accessibilitytoinstances/>Connect to EC2 instance</a></li>
-<li><a href=4-s3log/>Manage session logs</a></li>
-<li><a href=5-Portfwd/>Port Forwarding</a></li>
-<li><a href=6-cleanup/>Clean up resources</a></li>
+<li><a href=1-introduce/>Project Introduction</a></li>
+<li><a href=2-prerequisite/>Prerequisites</a></li>
+<li><a href=3-create-backup-plan/>Create and Configure Backup Plan</a></li>
+<li><a href=4-lambda-functions/>Integrate Lambda Functions for Verification & Notifications</a></li>
+<li><a href=5-cleanup/>Resource Cleanup</a></li>
 </ol>
 </div>
 </div>
@@ -180,18 +171,18 @@
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=./js/clipboard.min.js?1754900659></script>
-<script src=./js/perfect-scrollbar.min.js?1754900659></script>
-<script src=./js/perfect-scrollbar.jquery.min.js?1754900659></script>
-<script src=./js/jquery.sticky.js?1754900659></script>
-<script src=./js/featherlight.min.js?1754900659></script>
-<script src=./js/highlight.pack.js?1754900659></script>
+<script src=./js/clipboard.min.js?1754934961></script>
+<script src=./js/perfect-scrollbar.min.js?1754934961></script>
+<script src=./js/perfect-scrollbar.jquery.min.js?1754934961></script>
+<script src=./js/jquery.sticky.js?1754934961></script>
+<script src=./js/featherlight.min.js?1754934961></script>
+<script src=./js/highlight.pack.js?1754934961></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=./js/modernizr.custom-3.6.0.js?1754900659></script>
-<script src=./js/learn.js?1754900659></script>
-<script src=./js/hugo-learn.js?1754900659></script>
-<link href=./mermaid/mermaid.css?1754900659 rel=stylesheet>
-<script src=./mermaid/mermaid.js?1754900659></script>
+<script src=./js/modernizr.custom-3.6.0.js?1754934961></script>
+<script src=./js/learn.js?1754934961></script>
+<script src=./js/hugo-learn.js?1754934961></script>
+<link href=./mermaid/mermaid.css?1754934961 rel=stylesheet>
+<script src=./mermaid/mermaid.js?1754934961></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 <script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-158079754-2','auto'),ga('send','pageview')</script>
 </body>

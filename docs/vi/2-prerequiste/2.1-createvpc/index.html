@@ -6,7 +6,7 @@
 <meta name=description content>
 <meta name=author content="journeyoftheaverageguy@gmail.com">
 <link rel=icon href=../../../images/favicon.png type=image/png>
-<title>Test Kiểm Tra :: AWS System Manager</title>
+<title>Chuẩn bị môi trường AWS :: AWS System Manager</title>
 <link href=../../../css/nucleus.css?1754934961 rel=stylesheet>
 <link href=../../../css/fontawesome-all.min.css?1754934961 rel=stylesheet>
 <link href=../../../css/hybrid.css?1754934961 rel=stylesheet>
@@ -20,7 +20,7 @@
 <script src=../../../js/jquery-3.3.1.min.js?1754934961></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
-<body data-url=../../../vi/4-s3log/4.1-testkiemtra/>
+<body data-url=../../../vi/2-prerequiste/2.1-createvpc/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -45,13 +45,16 @@
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/vi/2-prerequiste/ title="Các bước chuẩn bị" class=dd-item>
+<li data-nav-id=/vi/2-prerequiste/ title="Các bước chuẩn bị" class="dd-item
+parent">
 <a href=../../../vi/2-prerequiste/>
 <b> 2. </b> Các bước chuẩn bị
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/vi/2-prerequiste/2.1-createvpc/ title="Chuẩn bị môi trường AWS " class=dd-item>
+<li data-nav-id=/vi/2-prerequiste/2.1-createvpc/ title="Chuẩn bị môi trường AWS " class="dd-item
+parent
+active">
 <a href=../../../vi/2-prerequiste/2.1-createvpc/>
 <b> 2.1 </b> Chuẩn bị môi trường AWS
 <i class="fas fa-check read-icon"></i>
@@ -71,16 +74,13 @@
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/vi/4-s3log/ title=" Triển khai AWS Backup Alert & Verification với Lambda và SNS" class="dd-item
-parent">
+<li data-nav-id=/vi/4-s3log/ title=" Triển khai AWS Backup Alert & Verification với Lambda và SNS" class=dd-item>
 <a href=../../../vi/4-s3log/>
 <b> 4. </b> Triển khai AWS Backup Alert & Verification với Lambda và SNS
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/vi/4-s3log/4.1-testkiemtra/ title="Test Kiểm Tra" class="dd-item
-parent
-active">
+<li data-nav-id=/vi/4-s3log/4.1-testkiemtra/ title="Test Kiểm Tra" class=dd-item>
 <a href=../../../vi/4-s3log/4.1-testkiemtra/>
 <b> 4.1 </b> Test Kiểm Tra
 <i class="fas fa-check read-icon"></i>
@@ -110,7 +110,7 @@ active">
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=en value=https://qhiennn.github.io/workshop/4-s3log/4.1-testkiemtra/>English</option><option id=vi value=https://qhiennn.github.io/workshop/vi/4-s3log/4.1-testkiemtra/ selected>Tiếng Việt</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=en value=https://qhiennn.github.io/workshop/2-prerequiste/2.1-createvpc/>English</option><option id=vi value=https://qhiennn.github.io/workshop/vi/2-prerequiste/2.1-createvpc/ selected>Tiếng Việt</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div>
 </a>
 </li>
@@ -156,16 +156,16 @@ active">
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=../../../vi/>Backup & Disaster Recovery</a> > <a href=../../../vi/4-s3log/> Triển khai AWS Backup Alert & Verification với Lambda và SNS</a> > Test Kiểm Tra
+<a href=../../../vi/>Backup & Disaster Recovery</a> > <a href=../../../vi/2-prerequiste/>Các bước chuẩn bị</a> > Chuẩn bị môi trường AWS
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#1-test-backupnotificationlambda-bằng-eventbridge-test-event>1. Test <strong>BackupNotificationLambda</strong> bằng EventBridge test event</a></li>
-<li><a href=#2-test-backupverificationlambda-run-manual>2. Test <strong>BackupVerificationLambda</strong> (run manual)</a></li>
-<li><a href=#3-kiểm-tra-cloudwatch-logs>3. Kiểm tra CloudWatch Logs</a></li>
+<li><a href=#1-đăng-nhập-aws-console>1. Đăng nhập AWS Console</a></li>
+<li><a href=#2-tạo-ec2-instance>2. Tạo EC2 Instance</a></li>
+<li><a href=#3-kết-nối-tới-ec2>3. Kết nối tới EC2</a></li>
 </ul>
 </nav>
 </div>
@@ -176,82 +176,77 @@ active">
 </div>
 <div id=body-inner>
 <h1>
-Test Kiểm Tra
+Chuẩn bị môi trường AWS
 </h1>
-<h2 id=1-test-backupnotificationlambda-bằng-eventbridge-test-event>1. Test <strong>BackupNotificationLambda</strong> bằng EventBridge test event</h2>
-<ol>
-<li><strong>Đi tới Lambda function</strong>: <code>BackupNotificationLambda</code></li>
-<li>Chọn <strong>Test</strong> → <strong>Configure test event</strong></li>
-<li>Chọn <strong>Create new test event</strong></li>
-<li><strong>Name</strong>: <code>testBackupFail</code></li>
-<li>Dán EventBridge-style JSON sau vào <strong>Event JSON</strong>:
-<img src=../../../images/2.prerequisite/4.5.3.png alt=VPC>
-<img src=../../../images/2.prerequisite/4.5.2.png alt=VPC></li>
-</ol>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
-  <span style=color:#f92672>&#34;version&#34;</span>: <span style=color:#e6db74>&#34;0&#34;</span>,
-  <span style=color:#f92672>&#34;id&#34;</span>: <span style=color:#e6db74>&#34;test-id-123&#34;</span>,
-  <span style=color:#f92672>&#34;detail-type&#34;</span>: <span style=color:#e6db74>&#34;Backup Job State Change&#34;</span>,
-  <span style=color:#f92672>&#34;source&#34;</span>: <span style=color:#e6db74>&#34;aws.backup&#34;</span>,
-  <span style=color:#f92672>&#34;account&#34;</span>: <span style=color:#e6db74>&#34;123456789012&#34;</span>,
-  <span style=color:#f92672>&#34;time&#34;</span>: <span style=color:#e6db74>&#34;2025-08-10T12:00:00Z&#34;</span>,
-  <span style=color:#f92672>&#34;region&#34;</span>: <span style=color:#e6db74>&#34;ap-southeast-1&#34;</span>,
-  <span style=color:#f92672>&#34;detail&#34;</span>: {
-    <span style=color:#f92672>&#34;state&#34;</span>: <span style=color:#e6db74>&#34;FAILED&#34;</span>,
-    <span style=color:#f92672>&#34;backupJobId&#34;</span>: <span style=color:#e6db74>&#34;test-backup-123&#34;</span>,
-    <span style=color:#f92672>&#34;backupVaultName&#34;</span>: <span style=color:#e6db74>&#34;Default&#34;</span>,
-    <span style=color:#f92672>&#34;resourceArn&#34;</span>: <span style=color:#e6db74>&#34;arn:aws:rds:ap-southeast-1:123456789012:db:mydb&#34;</span>
-  }
-}
-</code></pre></div><ol>
-<li><strong>Save</strong> → <strong>Test</strong> → Quan sát kết quả và kiểm tra email.
-<img src=../../../images/2.prerequisite/4.5.1.png alt=VPC></li>
-</ol>
-<hr>
-<h2 id=2-test-backupverificationlambda-run-manual>2. Test <strong>BackupVerificationLambda</strong> (run manual)</h2>
-<ol>
-<li><strong>Đi tới Lambda function</strong>: <code>BackupVerificationLambda</code></li>
-<li>Chọn <strong>Test</strong></li>
-<li>Tạo test event <code>{}</code> → <strong>Test</strong></li>
-<li>Kiểm tra logs:
+<h1 id=-hướng-dẫn-tạo-ec2-instance-trên-aws>🚀 Hướng dẫn tạo EC2 Instance trên AWS</h1>
+<h2 id=1-đăng-nhập-aws-console>1. Đăng nhập AWS Console</h2>
 <ul>
-<li>Nếu Lambda publish SNS → Bạn sẽ nhận email.</li>
-<li>Nếu không có backup jobs → Sẽ thấy log <code>"No backup jobs found."</code>
-<img src=../../../images/2.prerequisite/4.5.1.2.png alt=VPC>
-<img src=../../../images/2.prerequisite/4.5.1.1.png alt=VPC>
-<img src=../../../images/2.prerequisite/4.5.1.5.png alt=VPC></li>
+<li>Truy cập <a href=https://console.aws.amazon.com/>https://console.aws.amazon.com/</a></li>
+<li>Chọn <strong>EC2</strong> từ menu dịch vụ.</li>
+</ul>
+<hr>
+<h2 id=2-tạo-ec2-instance>2. Tạo EC2 Instance</h2>
+<ol>
+<li><strong>Bấm nút</strong> <code>Launch instance</code>.</li>
+<li><strong>Đặt tên</strong>: ví dụ <code>EC2-DynamoDB-Workshop</code>.</li>
+<li><strong>Chọn Amazon Machine Image (AMI)</strong>:
+<ul>
+<li><code>Amazon Linux 2 AMI (HVM), SSD Volume Type</code>.</li>
 </ul>
 </li>
-</ol>
-<hr>
-<h2 id=3-kiểm-tra-cloudwatch-logs>3. Kiểm tra CloudWatch Logs</h2>
-<ol>
-<li>Vào <strong>AWS Console</strong> → <strong>CloudWatch</strong> → <strong>Logs</strong>
-<img src=../../../images/2.prerequisite/4.6.1.png alt=VPC></li>
-<li>Chọn nhóm log:
+<li><strong>Chọn Instance Type</strong>:
 <ul>
-<li><code>/aws/lambda/BackupNotificationLambda</code>
-<img src=../../../images/2.prerequisite/4.6.2.png alt=VPC></li>
-<li><code>/aws/lambda/BackupVerificationLambda</code>
-<img src=../../../images/2.prerequisite/4.6.3.png alt=VPC></li>
+<li><code>t2.micro</code> (Free Tier).</li>
 </ul>
 </li>
-<li>Mở <strong>stream log mới nhất</strong></li>
-<li>Đọc log để xác nhận kết quả.</li>
-</ol>
+<li><strong>Tạo hoặc chọn Key Pair</strong>:
 <ul>
-<li>BackupNotificationLambda
-<img src=../../../images/2.prerequisite/4.6.4.png alt=VPC></li>
-<li>BackupVerificationLambda
-<img src=../../../images/2.prerequisite/4.6.5.png alt=VPC></li>
+<li>Nếu chưa có: chọn <strong>Create new key pair</strong>, tải file <code>.pem</code> về.</li>
 </ul>
+</li>
+<li><strong>Cấu hình Network</strong>:
+<ul>
+<li>VPC: Chọn VPC mặc định hoặc VPC riêng.</li>
+<li>Subnet: Chọn subnet theo vùng.</li>
+<li>Enable Auto-assign Public IP: <strong>Yes</strong>.</li>
+</ul>
+</li>
+<li><strong>Security Group</strong>:
+<ul>
+<li>Tạo mới hoặc chọn Security Group có rule:
+<ul>
+<li><code>SSH</code> (Port 22) - Your IP.</li>
+<li>(Tuỳ dự án) mở thêm HTTP (Port 80), HTTPS (Port 443).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Storage</strong>:
+<ul>
+<li>8 GiB (SSD GP2) là đủ cho workshop.</li>
+</ul>
+</li>
+<li><strong>Bấm</strong> <code>Launch Instance</code>.
+<img src=../../../images/2.prerequisite/EC2.png alt=VPC></li>
+</ol>
+<hr>
+<h2 id=3-kết-nối-tới-ec2>3. Kết nối tới EC2</h2>
+<ol>
+<li>Vào <strong>EC2 Dashboard</strong> → Chọn instance vừa tạo.</li>
+<li>Bấm <strong>Connect</strong> → Tab <strong>SSH client</strong>.</li>
+<li>Chạy trên máy local:</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>chmod <span style=color:#ae81ff>400</span> your-key.pem
+ssh -i <span style=color:#e6db74>&#34;your-key.pem&#34;</span> ec2-user@&lt;Public-IP&gt;
+
+</code></pre></div><p><img src=../../../images/2.prerequisite/1.png alt=VPC></p>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=../../../vi/4-s3log/ title=" Triển khai AWS Backup Alert & Verification với Lambda và SNS"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=../../../vi/5-cleanup/ title="Dọn dẹp tài nguyên  " style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=../../../vi/2-prerequiste/ title="Các bước chuẩn bị"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=../../../vi/2-prerequiste/2.2-createpublicsubnet/ title="Tạo Public subnet" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>

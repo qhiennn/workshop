@@ -6,21 +6,21 @@
 <meta name=description content>
 <meta name=author content="journeyoftheaverageguy@gmail.com">
 <link rel=icon href=../images/favicon.png type=image/png>
-<title>Clean up resources :: AWS System Manager</title>
-<link href=../css/nucleus.css?1754900659 rel=stylesheet>
-<link href=../css/fontawesome-all.min.css?1754900659 rel=stylesheet>
-<link href=../css/hybrid.css?1754900659 rel=stylesheet>
-<link href=../css/featherlight.min.css?1754900659 rel=stylesheet>
-<link href=../css/perfect-scrollbar.min.css?1754900659 rel=stylesheet>
-<link href=../css/auto-complete.css?1754900659 rel=stylesheet>
-<link href=../css/atom-one-dark-reasonable.css?1754900659 rel=stylesheet>
-<link href=../css/theme.css?1754900659 rel=stylesheet>
-<link href=../css/hugo-theme.css?1754900659 rel=stylesheet>
-<link href=../css/theme-workshop.css?1754900659 rel=stylesheet>
-<script src=../js/jquery-3.3.1.min.js?1754900659></script>
+<title>Resource Cleanup :: AWS System Manager</title>
+<link href=../css/nucleus.css?1754934961 rel=stylesheet>
+<link href=../css/fontawesome-all.min.css?1754934961 rel=stylesheet>
+<link href=../css/hybrid.css?1754934961 rel=stylesheet>
+<link href=../css/featherlight.min.css?1754934961 rel=stylesheet>
+<link href=../css/perfect-scrollbar.min.css?1754934961 rel=stylesheet>
+<link href=../css/auto-complete.css?1754934961 rel=stylesheet>
+<link href=../css/atom-one-dark-reasonable.css?1754934961 rel=stylesheet>
+<link href=../css/theme.css?1754934961 rel=stylesheet>
+<link href=../css/hugo-theme.css?1754934961 rel=stylesheet>
+<link href=../css/theme-workshop.css?1754934961 rel=stylesheet>
+<script src=../js/jquery-3.3.1.min.js?1754934961></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
-<body data-url=../6-cleanup/>
+<body data-url=../5-cleanup/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=../js/lunr.min.js?1754900659></script>
-<script type=text/javascript src=../js/auto-complete.js?1754900659></script>
+<script type=text/javascript src=../js/lunr.min.js?1754934961></script>
+<script type=text/javascript src=../js/auto-complete.js?1754934961></script>
 <script type=text/javascript>var baseurl="https://qhiennn.github.io/workshop/"</script>
-<script type=text/javascript src=../js/search.js?1754900659></script>
+<script type=text/javascript src=../js/search.js?1754934961></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -45,31 +45,23 @@
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/2-prerequiste/ title="Preparation " class=dd-item>
+<li data-nav-id=/2-prerequiste/ title="Prerequisite Steps" class=dd-item>
 <a href=../2-prerequiste/>
-<b> 2. </b> Preparation
+<b> 2. </b> Prerequisite Steps
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/2-prerequiste/2.1-createec2/ title="Preparing VPC and EC2" class=dd-item>
-<a href=../2-prerequiste/2.1-createec2/>
-<b> 2.1 </b> Preparing VPC and EC2
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/2-prerequiste/2.1-createec2/2.1.1-createvpc/ title="Prepare AWS Environment" class=dd-item>
-<a href=../2-prerequiste/2.1-createec2/2.1.1-createvpc/>
-<b> 2.1.1 </b> Prepare AWS Environment
+<li data-nav-id=/2-prerequiste/2.1-createvpc/ title="Prepare AWS Environment" class=dd-item>
+<a href=../2-prerequiste/2.1-createvpc/>
+<b> 2.1 </b> Prepare AWS Environment
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/ title="Create Public Subnet" class=dd-item>
-<a href=../2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/>
-<b> 2.1.2 </b> Create Public Subnet
+<li data-nav-id=/2-prerequiste/2.2-createpublicsubnet/ title="Create Public Subnet" class=dd-item>
+<a href=../2-prerequiste/2.2-createpublicsubnet/>
+<b> 2.2 </b> Create Public Subnet
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
 </li>
 </ul>
 </li>
@@ -79,9 +71,9 @@
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/4-s3log/ title="🚀 Deploy AWS Backup Alert & Verification with Lambda and SNS" class=dd-item>
+<li data-nav-id=/4-s3log/ title=" Deploy AWS Backup Alert & Verification with Lambda and SNS" class=dd-item>
 <a href=../4-s3log/>
-<b> 4. </b> 🚀 Deploy AWS Backup Alert & Verification with Lambda and SNS
+<b> 4. </b> Deploy AWS Backup Alert & Verification with Lambda and SNS
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
@@ -93,11 +85,11 @@
 </li>
 </ul>
 </li>
-<li data-nav-id=/6-cleanup/ title="Clean up resources" class="dd-item
+<li data-nav-id=/5-cleanup/ title="Resource Cleanup" class="dd-item
 parent
 active">
-<a href=../6-cleanup/>
-<b>6. </b>Clean up resources
+<a href=../5-cleanup/>
+<b>5. </b>Resource Cleanup
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
@@ -117,7 +109,7 @@ active">
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=en value=https://qhiennn.github.io/workshop/6-cleanup/ selected>English</option><option id=vi value=https://qhiennn.github.io/workshop/vi/6-cleanup/>Tiếng Việt</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=en value=https://qhiennn.github.io/workshop/5-cleanup/ selected>English</option><option id=vi value=https://qhiennn.github.io/workshop/vi/5-cleanup/>Tiếng Việt</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div>
 </a>
 </li>
@@ -163,7 +155,7 @@ active">
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=../>Session Management</a> > Clean up resources
+<a href=../>Backup & Disaster Recovery</a> > Resource Cleanup
 </span>
 </div>
 <div class=progress>
@@ -173,6 +165,10 @@ active">
 <li>
 <ul>
 <li></li>
+<li><a href=#delete-dynamodb-tables>Delete DynamoDB Tables</a></li>
+<li><a href=#delete-lambda-functions>Delete Lambda Functions</a></li>
+<li><a href=#delete-sns-topics--subscriptions>Delete SNS Topics & Subscriptions</a></li>
+<li><a href=#delete-iam-roles-and-policies>Delete IAM Roles and Policies</a></li>
 </ul>
 </li>
 </ul>
@@ -185,111 +181,98 @@ active">
 </div>
 <div id=body-inner>
 <h1>
-Clean up resources
+Resource Cleanup
 </h1>
-<p>We will take the following steps to delete the resources we created in this exercise.</p>
-<h4 id=delete-ec2-instance>Delete EC2 instance</h4>
+<p>After completing the lab, you need to delete the AWS resources created to avoid incurring unnecessary costs. This section will guide you step-by-step on how to delete the resources created during the <strong>Backup & Disaster Recovery</strong> workshop.</p>
+<h4 id=delete-ec2-instance>Delete EC2 Instance</h4>
 <ol>
-<li>
-<p>Go to <a href=https://console.aws.amazon.com/ec2/v2/home>EC2 service management console</a></p>
+<li>Go to the <a href=https://console.aws.amazon.com/ec2/v2/home>EC2 management console</a>
 <ul>
 <li>Click <strong>Instances</strong>.</li>
-<li>Select both <strong>Public Linux Instance</strong> and <strong>Private Windows Instance</strong> instances.</li>
+<li>Select <strong>EC2BackUp</strong>.</li>
 <li>Click <strong>Instance state</strong>.</li>
 <li>Click <strong>Terminate instance</strong>, then click <strong>Terminate</strong> to confirm.</li>
 </ul>
 </li>
-<li>
-<p>Go to <a href=https://console.aws.amazon.com/iamv2/home#/home>IAM service management console</a></p>
-<ul>
-<li>Click <strong>Roles</strong>.</li>
-<li>In the search box, enter <strong>SSM</strong>.</li>
-<li>Click to select <strong>SSM-Role</strong>.</li>
-<li>Click <strong>Delete</strong>, then enter the role name <strong>SSM-Role</strong> and click <strong>Delete</strong> to delete the role.</li>
-</ul>
-</li>
 </ol>
-<p><img src=../images/6.clean/001-clean.png alt=Clean></p>
-<ol start=3>
-<li>Click <strong>Users</strong>.
-<ul>
-<li>Click on user <strong>Portfwd</strong>.</li>
-<li>Click <strong>Delete</strong>, then enter the user name <strong>Portfwd</strong> and click <strong>Delete</strong> to delete the user.</li>
-</ul>
-</li>
-</ol>
-<h4 id=delete-s3-bucket>Delete S3 bucket</h4>
+<p><img src=../images/2.prerequisite/5.1.png alt=VPC></p>
+<h4 id=delete-backup-plan--backup-vault>Delete Backup Plan & Backup Vault</h4>
 <ol>
-<li>
-<p>Access <a href=https://console.aws.amazon.com/systems-manager/session-manager>System Manager - Session Manager service management console</a>.</p>
+<li>Go to <strong>AWS Console</strong> → <strong>AWS Backup</strong>.</li>
+<li><strong>Delete Backup Plan</strong>:
 <ul>
-<li>Click the <strong>Preferences</strong> tab.</li>
-<li>Click <strong>Edit</strong>.</li>
-<li>Scroll down.</li>
-<li>In the section <strong>S3 logging</strong>.</li>
-<li>Uncheck <strong>Enable</strong> to disable logging.</li>
-<li>Scroll down.</li>
-<li>Click <strong>Save</strong>.</li>
+<li>Select <strong>Backup plans</strong>.</li>
+<li>Select the plan created in the lab.</li>
+<li>Click <strong>Delete</strong> → Confirm.</li>
 </ul>
 </li>
-<li>
-<p>Go to <a href=https://s3.console.aws.amazon.com/s3/home>S3 service management console</a></p>
+<li><strong>Delete Backup Vault</strong> (if no longer needed):
 <ul>
-<li>Click on the S3 bucket we created for this lab. (Example: lab-fcj-bucket-0001 )</li>
-<li>Click <strong>Empty</strong>.</li>
-<li>Enter <strong>permanently delete</strong>, then click <strong>Empty</strong> to proceed to delete the object in the bucket.</li>
-<li>Click <strong>Exit</strong>.</li>
+<li>Go to <strong>Backup vaults</strong>.</li>
+<li>Select your vault (e.g., <code>Default</code> or custom name).</li>
+<li>Delete all Recovery Points inside the vault.</li>
+<li>Click <strong>Delete vault</strong>.</li>
 </ul>
 </li>
-<li>
-<p>After deleting all objects in the bucket, click <strong>Delete</strong></p>
-</li>
 </ol>
-<p><img src=../images/6.clean/002-clean.png alt=Clean></p>
-<ol start=4>
-<li>Enter the name of the S3 bucket, then click <strong>Delete bucket</strong> to proceed with deleting the S3 bucket.</li>
-</ol>
-<p><img src=../images/6.clean/003-clean.png alt=Clean></p>
-<h4 id=delete-vpc-endpoints>Delete VPC Endpoints</h4>
+<p><img src=../images/2.prerequisite/5.2.png alt=VPC><br>
+<img src=../images/2.prerequisite/5.2.1.png alt=VPC><br>
+<img src=../images/2.prerequisite/5.2.2.png alt=VPC></p>
+<h3 id=delete-dynamodb-tables>Delete DynamoDB Tables</h3>
 <ol>
-<li>Go to <a href=https://console.aws.amazon.com/vpc/home>VPC service management console</a>
+<li>Go to <strong>AWS Console</strong> → <strong>DynamoDB</strong> → <strong>Tables</strong>.</li>
+<li>Select and delete each table created:
 <ul>
-<li>Click <strong>Endpoints</strong>.</li>
-<li>Select the 4 endpoints we created for the lab including <strong>SSM</strong>, <strong>SSMMESSAGES</strong>, <strong>EC2MESSAGES</strong>, <strong>S3GW</strong>.</li>
-<li>Click <strong>Actions</strong>.</li>
-<li>Click <strong>Delete VPC endpoints</strong>.</li>
+<li><code>CategoryHoiThao</code></li>
+<li><code>HistoryBook</code></li>
+<li><code>HistoryBookUsers</code></li>
+<li><code>HoiThao</code></li>
+<li><code>Role</code></li>
+<li><code>User</code></li>
+<li><code>UserGiaiDau</code></li>
+<li><code>UserHoiThao</code></li>
+<li><code>UserLiveShow</code></li>
+<li><code>UserRole</code></li>
 </ul>
 </li>
+<li>Click <strong>Delete table</strong> → Confirm.</li>
 </ol>
-<p><img src=../images/6.clean/004-clean.png alt=Clean></p>
-<ol start=2>
-<li>
-<p>In the confirm box, enter <strong>delete</strong>.</p>
-<ul>
-<li>Click <strong>Delete</strong> to proceed with deleting endpoints.</li>
-</ul>
-</li>
-<li>
-<p>Click the refresh icon, check that all endpoints have been deleted before proceeding to the next step.</p>
-</li>
-</ol>
-<p><img src=../images/6.clean/005-clean.png alt=Clean></p>
-<h4 id=delete-vpc>Delete VPC</h4>
+<p><img src=../images/2.prerequisite/5.3.1.png alt=VPC><br>
+<img src=../images/2.prerequisite/5.3.png alt=VPC></p>
+<h4 id=delete-documentdb-cluster>Delete DocumentDB Cluster</h4>
 <ol>
-<li>
-<p>Go to <a href=https://console.aws.amazon.com/vpc/home>VPC service management console</a></p>
+<li>Go to <strong>AWS Console</strong> → <strong>Amazon DocumentDB</strong>.</li>
+<li>Select the cluster.</li>
+<li>Click <strong>Actions</strong> → <strong>Delete cluster</strong>.</li>
+<li>Tick the option to <strong>delete snapshots</strong> (if you don’t need to keep them) → Confirm.</li>
+</ol>
+<p><img src=../images/2.prerequisite/5.4.png alt=VPC></p>
+<h3 id=delete-lambda-functions>Delete Lambda Functions</h3>
+<ol>
+<li>Go to <strong>AWS Console</strong> → <strong>Lambda</strong>.</li>
+<li>Delete the functions:
 <ul>
-<li>Click <strong>Your VPCs</strong>.</li>
-<li>Click on <strong>Lab VPC</strong>.</li>
-<li>Click <strong>Actions</strong>.</li>
-<li>Click <strong>Delete VPC</strong>.</li>
+<li><code>BackupNotificationLambda</code></li>
+<li><code>BackupVerificationLambda</code></li>
 </ul>
 </li>
-<li>
-<p>In the confirm box, enter <strong>delete</strong> to confirm, click <strong>Delete</strong> to delete <strong>Lab VPC</strong> and related resources.</p>
-</li>
 </ol>
-<p><img src=../images/6.clean/006-clean.png alt=Clean></p>
+<p><img src=../images/2.prerequisite/5.5.png alt=VPC></p>
+<h3 id=delete-sns-topics--subscriptions>Delete SNS Topics & Subscriptions</h3>
+<ol>
+<li>Go to <strong>AWS Console</strong> → <strong>Amazon SNS</strong>.</li>
+<li>Delete the topic used for notifications.</li>
+<li>Delete the related subscriptions.</li>
+</ol>
+<p><img src=../images/2.prerequisite/5.6.png alt=VPC><br>
+<img src=../images/2.prerequisite/5.6.1.png alt=VPC></p>
+<h3 id=delete-iam-roles-and-policies>Delete IAM Roles and Policies</h3>
+<ol>
+<li>Go to <strong>AWS Console</strong> → <strong>IAM</strong>.</li>
+<li>Delete the roles created for Lambda and database access.</li>
+<li>Delete the custom policies created in the lab.</li>
+</ol>
+<p><img src=../images/2.prerequisite/5.7.png alt=VPC></p>
 <footer class=footline>
 </footer>
 </div>
@@ -302,18 +285,18 @@ Clean up resources
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=../js/clipboard.min.js?1754900659></script>
-<script src=../js/perfect-scrollbar.min.js?1754900659></script>
-<script src=../js/perfect-scrollbar.jquery.min.js?1754900659></script>
-<script src=../js/jquery.sticky.js?1754900659></script>
-<script src=../js/featherlight.min.js?1754900659></script>
-<script src=../js/highlight.pack.js?1754900659></script>
+<script src=../js/clipboard.min.js?1754934961></script>
+<script src=../js/perfect-scrollbar.min.js?1754934961></script>
+<script src=../js/perfect-scrollbar.jquery.min.js?1754934961></script>
+<script src=../js/jquery.sticky.js?1754934961></script>
+<script src=../js/featherlight.min.js?1754934961></script>
+<script src=../js/highlight.pack.js?1754934961></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=../js/modernizr.custom-3.6.0.js?1754900659></script>
-<script src=../js/learn.js?1754900659></script>
-<script src=../js/hugo-learn.js?1754900659></script>
-<link href=../mermaid/mermaid.css?1754900659 rel=stylesheet>
-<script src=../mermaid/mermaid.js?1754900659></script>
+<script src=../js/modernizr.custom-3.6.0.js?1754934961></script>
+<script src=../js/learn.js?1754934961></script>
+<script src=../js/hugo-learn.js?1754934961></script>
+<link href=../mermaid/mermaid.css?1754934961 rel=stylesheet>
+<script src=../mermaid/mermaid.js?1754934961></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 <script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-158079754-2','auto'),ga('send','pageview')</script>
 </body>

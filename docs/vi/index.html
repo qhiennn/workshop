@@ -6,18 +6,18 @@
 <meta name=description content>
 <meta name=author content="journeyoftheaverageguy@gmail.com">
 <link rel=icon href=../images/favicon.png type=image/png>
-<title>Session Management :: AWS System Manager</title>
-<link href=../css/nucleus.css?1754900659 rel=stylesheet>
-<link href=../css/fontawesome-all.min.css?1754900659 rel=stylesheet>
-<link href=../css/hybrid.css?1754900659 rel=stylesheet>
-<link href=../css/featherlight.min.css?1754900659 rel=stylesheet>
-<link href=../css/perfect-scrollbar.min.css?1754900659 rel=stylesheet>
-<link href=../css/auto-complete.css?1754900659 rel=stylesheet>
-<link href=../css/atom-one-dark-reasonable.css?1754900659 rel=stylesheet>
-<link href=../css/theme.css?1754900659 rel=stylesheet>
-<link href=../css/hugo-theme.css?1754900659 rel=stylesheet>
-<link href=../css/theme-workshop.css?1754900659 rel=stylesheet>
-<script src=../js/jquery-3.3.1.min.js?1754900659></script>
+<title>Backup & Disaster Recovery :: AWS System Manager</title>
+<link href=../css/nucleus.css?1754934961 rel=stylesheet>
+<link href=../css/fontawesome-all.min.css?1754934961 rel=stylesheet>
+<link href=../css/hybrid.css?1754934961 rel=stylesheet>
+<link href=../css/featherlight.min.css?1754934961 rel=stylesheet>
+<link href=../css/perfect-scrollbar.min.css?1754934961 rel=stylesheet>
+<link href=../css/auto-complete.css?1754934961 rel=stylesheet>
+<link href=../css/atom-one-dark-reasonable.css?1754934961 rel=stylesheet>
+<link href=../css/theme.css?1754934961 rel=stylesheet>
+<link href=../css/hugo-theme.css?1754934961 rel=stylesheet>
+<link href=../css/theme-workshop.css?1754934961 rel=stylesheet>
+<script src=../js/jquery-3.3.1.min.js?1754934961></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=../vi/>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=../js/lunr.min.js?1754900659></script>
-<script type=text/javascript src=../js/auto-complete.js?1754900659></script>
+<script type=text/javascript src=../js/lunr.min.js?1754934961></script>
+<script type=text/javascript src=../js/auto-complete.js?1754934961></script>
 <script type=text/javascript>var baseurl="https://qhiennn.github.io/workshop//vi"</script>
-<script type=text/javascript src=../js/search.js?1754900659></script>
+<script type=text/javascript src=../js/search.js?1754934961></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -51,25 +51,17 @@
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
-<li data-nav-id=/vi/2-prerequiste/2.1-createec2/ title="Chuẩn bị VPC và EC2" class=dd-item>
-<a href=../vi/2-prerequiste/2.1-createec2/>
-<b> 2.1 </b> Chuẩn bị VPC và EC2
-<i class="fas fa-check read-icon"></i>
-</a>
-<ul>
-<li data-nav-id=/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/ title="Chuẩn bị môi trường AWS " class=dd-item>
-<a href=../vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/>
-<b> 2.1.1 </b> Chuẩn bị môi trường AWS
+<li data-nav-id=/vi/2-prerequiste/2.1-createvpc/ title="Chuẩn bị môi trường AWS " class=dd-item>
+<a href=../vi/2-prerequiste/2.1-createvpc/>
+<b> 2.1 </b> Chuẩn bị môi trường AWS
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/ title="Tạo Public subnet" class=dd-item>
-<a href=../vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/>
-<b> 2.1.2 </b> Tạo Public subnet
+<li data-nav-id=/vi/2-prerequiste/2.2-createpublicsubnet/ title="Tạo Public subnet" class=dd-item>
+<a href=../vi/2-prerequiste/2.2-createpublicsubnet/>
+<b> 2.2 </b> Tạo Public subnet
 <i class="fas fa-check read-icon"></i>
 </a>
-</li>
-</ul>
 </li>
 </ul>
 </li>
@@ -79,9 +71,9 @@
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
-<li data-nav-id=/vi/4-s3log/ title="🚀 Triển khai AWS Backup Alert & Verification với Lambda và SNS" class=dd-item>
+<li data-nav-id=/vi/4-s3log/ title=" Triển khai AWS Backup Alert & Verification với Lambda và SNS" class=dd-item>
 <a href=../vi/4-s3log/>
-<b> 4. </b> 🚀 Triển khai AWS Backup Alert & Verification với Lambda và SNS
+<b> 4. </b> Triển khai AWS Backup Alert & Verification với Lambda và SNS
 <i class="fas fa-check read-icon"></i>
 </a>
 <ul>
@@ -93,9 +85,9 @@
 </li>
 </ul>
 </li>
-<li data-nav-id=/vi/6-cleanup/ title="Dọn dẹp tài nguyên  " class=dd-item>
-<a href=../vi/6-cleanup/>
-<b>6. </b>Dọn dẹp tài nguyên
+<li data-nav-id=/vi/5-cleanup/ title="Dọn dẹp tài nguyên  " class=dd-item>
+<a href=../vi/5-cleanup/>
+<b>5. </b>Dọn dẹp tài nguyên
 <i class="fas fa-check read-icon"></i>
 </a>
 </li>
@@ -157,18 +149,18 @@
 <span id=sidebar-toggle-span>
 <a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i> navigation</a>
 </span>
-<h1 id=lam-viêc-vơi-amazon-system-manager---session-manager>Làm việc với Amazon System Manager - Session Manager</h1>
+<h1 id=làm-việc-với-aws-backup--disaster-recovery-automation>Làm việc với AWS Backup & Disaster Recovery Automation</h1>
 <h3 id=tổng-quan>Tổng quan</h3>
-<p>Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon System Manager - Session Management. Thực hành tạo kết nối đến máy chủ public và máy chủ private trong VPC.</p>
+<p>Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về <strong>AWS Backup</strong> và <strong>Disaster Recovery</strong> cho môi trường <strong>multi-database</strong> (DynamoDB, DocumentDB,&mldr;).<br>
+Bài lab bao gồm việc tạo kế hoạch sao lưu tự động, lưu trữ bản sao an toàn, kiểm thử khả năng phục hồi dữ liệu và thiết lập thông báo khi có sự cố.</p>
 <p><img src=../images/2.prerequisite/anhdiagram.png alt=VPC></p>
 <h3 id=nội-dung>Nội dung</h3>
 <ol>
-<li><a href=1-introduce/>Giới thiệu</a></li>
-<li><a href=2-Prerequiste/>Các bước chuẩn bị</a></li>
-<li><a href=3-Accessibilitytoinstance/>Tạo kết nối đến máy chủ EC2</a></li>
-<li><a href=4-s3log/>Quản lý session logs</a></li>
-<li><a href=5-Portfwd/>Port Forwarding</a></li>
-<li><a href=6-cleanup/>Dọn dẹp tài nguyên</a></li>
+<li><a href=1-introduce/>Giới thiệu dự án</a></li>
+<li><a href=2-prerequisite/>Các bước chuẩn bị</a></li>
+<li><a href=3-create-backup-plan/>Tạo và cấu hình kế hoạch Backup</a></li>
+<li><a href=4-lambda-functions/>Tích hợp Lambda Functions để kiểm thử & gửi thông báo</a></li>
+<li><a href=5-cleanup/>Dọn dẹp tài nguyên</a></li>
 </ol>
 </div>
 </div>
@@ -179,18 +171,18 @@
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=../js/clipboard.min.js?1754900659></script>
-<script src=../js/perfect-scrollbar.min.js?1754900659></script>
-<script src=../js/perfect-scrollbar.jquery.min.js?1754900659></script>
-<script src=../js/jquery.sticky.js?1754900659></script>
-<script src=../js/featherlight.min.js?1754900659></script>
-<script src=../js/highlight.pack.js?1754900659></script>
+<script src=../js/clipboard.min.js?1754934961></script>
+<script src=../js/perfect-scrollbar.min.js?1754934961></script>
+<script src=../js/perfect-scrollbar.jquery.min.js?1754934961></script>
+<script src=../js/jquery.sticky.js?1754934961></script>
+<script src=../js/featherlight.min.js?1754934961></script>
+<script src=../js/highlight.pack.js?1754934961></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=../js/modernizr.custom-3.6.0.js?1754900659></script>
-<script src=../js/learn.js?1754900659></script>
-<script src=../js/hugo-learn.js?1754900659></script>
-<link href=../mermaid/mermaid.css?1754900659 rel=stylesheet>
-<script src=../mermaid/mermaid.js?1754900659></script>
+<script src=../js/modernizr.custom-3.6.0.js?1754934961></script>
+<script src=../js/learn.js?1754934961></script>
+<script src=../js/hugo-learn.js?1754934961></script>
+<link href=../mermaid/mermaid.css?1754934961 rel=stylesheet>
+<script src=../mermaid/mermaid.js?1754934961></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 <script>(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-158079754-2','auto'),ga('send','pageview')</script>
 </body>

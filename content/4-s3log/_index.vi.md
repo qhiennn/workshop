@@ -1,5 +1,5 @@
 ---
-title : "🚀 Triển khai AWS Backup Alert & Verification với Lambda và SNS"
+title : " Triển khai AWS Backup Alert & Verification với Lambda và SNS"
 date :  "`r Sys.Date()`" 
 weight : 4 
 chapter : false

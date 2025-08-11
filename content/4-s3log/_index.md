@@ -1,5 +1,5 @@
 ---
-title : "🚀 Deploy AWS Backup Alert & Verification with Lambda and SNS"
+title : " Deploy AWS Backup Alert & Verification with Lambda and SNS"
 date :  "`r Sys.Date()`" 
 weight : 4 
 chapter : false

@@ -6,7 +6,7 @@
 <meta name=description content>
 <meta name=author content="journeyoftheaverageguy@gmail.com">
 <link rel=icon href=../../images/favicon.png type=image/png>
-<title>Tags :: AWS System Manager</title>
+<title>Dọn dẹp tài nguyên :: AWS System Manager</title>
 <link href=../../css/nucleus.css?1754934961 rel=stylesheet>
 <link href=../../css/fontawesome-all.min.css?1754934961 rel=stylesheet>
 <link href=../../css/hybrid.css?1754934961 rel=stylesheet>
@@ -20,7 +20,7 @@
 <script src=../../js/jquery-3.3.1.min.js?1754934961></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
-<body data-url=../../vi/tags/>
+<body data-url=../../vi/5-cleanup/>
 <nav id=sidebar class=showVisitedLinks>
 <div id=header-wrapper>
 <div id=header>
@@ -85,7 +85,9 @@
 </li>
 </ul>
 </li>
-<li data-nav-id=/vi/5-cleanup/ title="Dọn dẹp tài nguyên  " class=dd-item>
+<li data-nav-id=/vi/5-cleanup/ title="Dọn dẹp tài nguyên  " class="dd-item
+parent
+active">
 <a href=../../vi/5-cleanup/>
 <b>5. </b>Dọn dẹp tài nguyên
 <i class="fas fa-check read-icon"></i>
@@ -107,7 +109,7 @@
 <a class=padding>
 <i class="fas fa-language fa-fw"></i>
 <div class=select-style>
-<select id=select-language onchange="location=this.value"><option id=en value=https://qhiennn.github.io/workshop/tags/>English</option><option id=vi value=https://qhiennn.github.io/workshop/vi/tags/ selected>Tiếng Việt</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
+<select id=select-language onchange="location=this.value"><option id=en value=https://qhiennn.github.io/workshop/5-cleanup/>English</option><option id=vi value=https://qhiennn.github.io/workshop/vi/5-cleanup/ selected>Tiếng Việt</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg>
 </div>
 </a>
 </li>
@@ -153,11 +155,24 @@
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=../../vi/>Backup & Disaster Recovery</a> > Tags
+<a href=../../vi/>Backup & Disaster Recovery</a> > Dọn dẹp tài nguyên
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li></li>
+<li><a href=#xóa-các-bảng-dynamodb>Xóa các bảng DynamoDB</a></li>
+<li><a href=#xóa-lambda-functions>Xóa Lambda Functions</a></li>
+<li><a href=#xóa-sns-topics--subscriptions>Xóa SNS Topics & Subscriptions</a></li>
+<li><a href=#xóa-iam-roles-và-policies>Xóa IAM Roles và Policies</a></li>
+</ul>
+</li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
@@ -166,16 +181,103 @@
 </div>
 <div id=body-inner>
 <h1>
-taxonomy ::
-Tags
+Dọn dẹp tài nguyên
 </h1>
+<p>Sau khi hoàn thành bài lab, bạn cần xóa các tài nguyên AWS đã tạo để tránh phát sinh chi phí không cần thiết. Phần này sẽ hướng dẫn từng bước để xóa các tài nguyên đã tạo trong workshop <strong>Backup & Disaster Recovery</strong>.</p>
+<h4 id=xóa-ec2-instance>Xóa EC2 instance</h4>
+<ol>
+<li>Truy cập <a href=https://console.aws.amazon.com/ec2/v2/home>giao diện quản trị dịch vụ EC2</a></li>
+</ol>
 <ul>
+<li>Click <strong>Instances</strong>.</li>
+<li>Click chọn <strong>EC2BackUp</strong>.</li>
+<li>Click <strong>Instance state</strong>.</li>
+<li>Click <strong>Terminate instance</strong>, sau đó click <strong>Terminate</strong> để xác nhận.</li>
 </ul>
+<p><img src=../../images/2.prerequisite/5.1.png alt=VPC></p>
+<h4 id=xóa-backup-plan--backup-vault>Xóa Backup Plan & Backup Vault</h4>
+<ol>
+<li>Vào <strong>AWS Console</strong> → <strong>AWS Backup</strong>.</li>
+<li><strong>Xóa Backup Plan</strong>:
+<ul>
+<li>Chọn <strong>Backup plans</strong>.</li>
+<li>Chọn kế hoạch đã tạo trong lab.</li>
+<li>Nhấn <strong>Delete</strong> → Xác nhận.</li>
+</ul>
+</li>
+<li><strong>Xóa Backup Vault</strong> (nếu không còn sử dụng):
+<ul>
+<li>Vào <strong>Backup vaults</strong>.</li>
+<li>Chọn Vault của bạn (ví dụ <code>Default</code> hoặc tên tùy chỉnh).</li>
+<li>Xóa toàn bộ Recovery Points bên trong Vault.</li>
+<li>Nhấn <strong>Delete vault</strong>.</li>
+</ul>
+</li>
+</ol>
+<p><img src=../../images/2.prerequisite/5.2.png alt=VPC>
+<img src=../../images/2.prerequisite/5.2.1.png alt=VPC>
+<img src=../../images/2.prerequisite/5.2.2.png alt=VPC></p>
+<h3 id=xóa-các-bảng-dynamodb>Xóa các bảng DynamoDB</h3>
+<ol>
+<li>Vào <strong>AWS Console</strong> → <strong>DynamoDB</strong> → <strong>Tables</strong>.</li>
+<li>Chọn và xóa từng bảng đã tạo:
+<ul>
+<li><code>CategoryHoiThao</code></li>
+<li><code>HistoryBook</code></li>
+<li><code>HistoryBookUsers</code></li>
+<li><code>HoiThao</code></li>
+<li><code>Role</code></li>
+<li><code>User</code></li>
+<li><code>UserGiaiDau</code></li>
+<li><code>UserHoiThao</code></li>
+<li><code>UserLiveShow</code></li>
+<li><code>UserRole</code></li>
+</ul>
+</li>
+<li>Nhấn <strong>Delete table</strong> → Xác nhận.</li>
+</ol>
+<p><img src=../../images/2.prerequisite/5.3.1.png alt=VPC>
+<img src=../../images/2.prerequisite/5.3.png alt=VPC></p>
+<h4 id=xóa-documentdb-cluster>Xóa DocumentDB Cluster</h4>
+<ol>
+<li>Vào <strong>AWS Console</strong> → <strong>Amazon DocumentDB</strong>.</li>
+<li>Chọn cluster.</li>
+<li>Chọn <strong>Actions</strong> → <strong>Delete cluster</strong>.</li>
+<li>Tick chọn <strong>xóa snapshots</strong> (nếu không cần giữ) → Xác nhận.
+<img src=../../images/2.prerequisite/5.4.png alt=VPC></li>
+</ol>
+<h3 id=xóa-lambda-functions>Xóa Lambda Functions</h3>
+<ol>
+<li>Vào <strong>AWS Console</strong> → <strong>Lambda</strong>.</li>
+<li>Xóa các hàm:
+<ul>
+<li><code>BackupNotificationLambda</code></li>
+<li><code>BackupVerificationLambda</code>
+<img src=../../images/2.prerequisite/5.5.png alt=VPC></li>
+</ul>
+</li>
+</ol>
+<h3 id=xóa-sns-topics--subscriptions>Xóa SNS Topics & Subscriptions</h3>
+<ol>
+<li>Vào <strong>AWS Console</strong> → <strong>Amazon SNS</strong>.</li>
+<li>Xóa Topic dùng để gửi thông báo.</li>
+<li>Xóa các Subscription liên quan.
+<img src=../../images/2.prerequisite/5.6.png alt=VPC>
+<img src=../../images/2.prerequisite/5.6.1.png alt=VPC></li>
+</ol>
+<h3 id=xóa-iam-roles-và-policies>Xóa IAM Roles và Policies</h3>
+<ol>
+<li>Vào <strong>AWS Console</strong> → <strong>IAM</strong>.</li>
+<li>Xóa các Role tạo cho Lambda và truy cập Database.</li>
+<li>Xóa các Policy tùy chỉnh đã tạo trong lab.
+<img src=../../images/2.prerequisite/5.7.png alt=VPC></li>
+</ol>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
+<a class="nav nav-prev" href=../../vi/4-s3log/4.1-testkiemtra/ title="Test Kiểm Tra"> <i class="fa fa-chevron-left"></i></a>
 <a class="nav nav-next" href=../../vi/1-introduce/ title="Giới thiệu" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
