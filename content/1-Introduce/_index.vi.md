@@ -16,5 +16,5 @@ Giải pháp này đảm bảo dữ liệu luôn sẵn sàng, giảm thiểu r�
 - **Giám sát tập trung** qua CloudWatch và AWS Config.
 - **Khả năng mở rộng** để hỗ trợ Disaster Recovery đa vùng trong tương lai.
 
-Với cách tiếp cận này, hệ thống không chỉ phù hợp cho môi trường sản xuất thực tế mà còn giúp tiết kiệm thời gian, chi phí vận hành và đảm bảo an toàn dữ liệu cho hệ thống **Website đặt vé sự kiện Hutech**.
+Với cách tiếp cận này, hệ thống không chỉ phù hợp cho môi trường sản xuất thực tế mà còn giúp tiết kiệm thời gian, chi phí vận hành và đảm bảo an toàn dữ liệu cho hệ thống.
 ![VPC](/images/2.prerequisite/anhdiagram.png)

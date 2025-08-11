@@ -3,7 +3,7 @@ title : "Create Public Subnet"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
-pre : " <b> 2.1.2 </b> "
+pre : " <b> 2.2 </b> "
 ---
 
 # 🚀 Guide to Creating DynamoDB Tables on EC2 using AWS CLI

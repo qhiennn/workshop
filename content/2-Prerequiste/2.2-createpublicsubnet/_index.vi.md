@@ -3,7 +3,7 @@ title : "Tạo Public subnet"
 date :  "`r Sys.Date()`" 
 weight : 2
 chapter : false
-pre : " <b> 2.1.2 </b> "
+pre : " <b> 2.2 </b> "
 ---
 
 
@@ -195,8 +195,9 @@ aws dynamodb put-item \
     --item '{"userId": {"S": "U001"}, "roleId": {"S": "R001"}}'
 
 echo "✅ Tạo xong tất cả bảng và dữ liệu mẫu"
-
 ```
+![VPC](/images/2.prerequisite/2.11.png)
+
 ---
 
 ## 4. Cấp quyền chạy & thực thi script

@@ -1,7 +1,7 @@
 ---
 title : "Test Verification"
-date :  "r Sys.Date()" 
-weight : 1
+date :  "`r Sys.Date()`" 
+weight : 4
 chapter : false
 pre : " <b> 4.1 </b> "
 ---
@@ -15,7 +15,7 @@ pre : " <b> 4.1 </b> "
 5. Paste the following EventBridge-style JSON into **Event JSON**:
 ![VPC](/images/2.prerequisite/4.5.3.png)
 ![VPC](/images/2.prerequisite/4.5.2.png)
-json
+```json
 {
   "version": "0",
   "id": "test-id-123",
@@ -31,7 +31,7 @@ json
     "resourceArn": "arn:aws:rds:ap-southeast-1:123456789012:db:mydb"
   }
 }
-
+```
 1. **Save** → **Test** → Observe the result and check your email.
 ![VPC](/images/2.prerequisite/4.5.1.png)
 ---
