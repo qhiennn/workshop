@@ -3,7 +3,7 @@ theme = "hugo-theme-learn"
 
 # === BẮT BUỘC: điền đúng baseURL ===
 # Nếu repo là bất kỳ tên khác (project)   -> "https://<username>.github.io/<repo>/"
-baseURL = "https://phungduydat.github.io/FCJ-Workshop/"
+baseURL = "https://qhiennn.github.io/workshop/"
 
 publishDir = "docs"
 relativeURLs = true
